@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "AmexHotelsOneDay",
+    "version": "0.1",
+    "icons": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "host_permissions": ["https://www.amextravel.com/hotel-searches/*"],
+    "permissions": [
+        "tabs", 
+        "tabGroups", 
+        "storage"
+      ],
+    "content_scripts": [
+      {
+        "js": ["content.js"],
+        "matches": [
+          "https://www.amextravel.com/hotel-searches/*"
+        ]
+      }
+    ]
+  }
